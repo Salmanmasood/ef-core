@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Privacy";
+}
+
+<h1>Bulk insert</h1>
+
+<h1>@ViewBag.time</h1>
+
+
+<form asp-action="Privacy">
+
+    <div class="form-group">
+        <label class="control-label">NO Of Records:</label>
+        <input type="text" name="noOfRecords" id="noOfRecords" />
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">choice:</label>
+      
+        <select class="form-control" id="choice" name="choice">
+            <option value="1">InsertwithEachCommit</option>
+            <option value="2">InsertwithOneCommit</option>
+            <option value="3">InsertwithAddRange</option>
+            <option value="4">InsertwithBulkExtension</option>
+            
+        </select>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Insert!" class="btn btn-primary" />
+    </div>
+
+</form>

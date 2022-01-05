@@ -1,0 +1,119 @@
+﻿@model IEnumerable<ef_core.Models.TblBusiness>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BShortdesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BLongdesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BCatId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BAddressId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BSubCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BAddedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BModifiedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BMinSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BMaxSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BMinExperience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BMaxExperience)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BShortdesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BLongdesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BCatId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BAddressId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BSubCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BAddedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BMinSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BMaxSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BMinExperience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BMaxExperience)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
